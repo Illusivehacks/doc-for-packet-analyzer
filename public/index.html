@@ -424,7 +424,184 @@ python main.py</code></pre>
             </ul>
         </section>
 
-        <!-- Additional sections would follow the same pattern -->
+        
+        <section id="capture">
+            <h2><i class="fas fa-wifi"></i> Packet Capture</h2>
+            <p>Advanced packet capturing capabilities with multiple interface support and real-time filtering.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-filter"></i> Capture Features</h4>
+                <ul>
+                    <li>Multiple interface selection</li>
+                    <li>BPF (Berkeley Packet Filter) support</li>
+                    <li>Real-time traffic visualization</li>
+                    <li>Capture session management</li>
+                </ul>
+            </div>
+
+            <h3>Starting a Capture</h3>
+            <pre><code># Basic capture command
+packet-analyzer start-capture -i eth0 -f "tcp port 80" -l capture1.pcap</code></pre>
+
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/800x450?text=Capture+Interface" alt="Capture Interface">
+                <figcaption>Figure 3: Packet Capture Interface</figcaption>
+            </div>
+
+            <div class="note">
+                <p><strong>Pro Tip:</strong> Use BPF syntax for complex filters: <code>host 192.168.1.1 and (tcp port 443 or udp port 53)</code></p>
+            </div>
+        </section>
+
+        <section id="analysis">
+            <h2><i class="fas fa-search"></i> Packet Analysis</h2>
+            <p>Deep packet inspection with protocol decoding and flow analysis.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-microscope"></i> Analysis Tools</h4>
+                <ul>
+                    <li>Protocol hierarchy statistics</li>
+                    <li>Conversation analysis</li>
+                    <li>Payload inspection</li>
+                    <li>Expert information system</li>
+                </ul>
+            </div>
+
+            <h3>Filtering Syntax</h3>
+            <pre><code># Display filter examples
+http.request.method == "GET"
+ip.src == 192.168.1.0/24
+tcp.flags.syn == 1</code></pre>
+
+            <div class="warning">
+                <p><strong>Note:</strong> Display filters are different from capture filters. Use the correct syntax for each context.</p>
+            </div>
+        </section>
+
+        <section id="statistics">
+            <h2><i class="fas fa-chart-bar"></i> Network Statistics</h2>
+            <p>Comprehensive network performance monitoring and visualization.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-chart-line"></i> Statistical Metrics</h4>
+                <ul>
+                    <li>Bandwidth utilization</li>
+                    <li>Packet rate analysis</li>
+                    <li>Protocol distribution</li>
+                    <li>Top talkers identification</li>
+                </ul>
+            </div>
+
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/800x450?text=Network+Statistics+Dashboard" alt="Statistics Dashboard">
+                <figcaption>Figure 4: Network Statistics Overview</figcaption>
+            </div>
+        </section>
+
+        <section id="protocols">
+            <h2><i class="fas fa-project-diagram"></i> Supported Protocols</h2>
+            <p>Extensive protocol support with detailed decoding capabilities.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-layer-group"></i> Protocol Stack</h4>
+                <table>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Protocols</th>
+                    </tr>
+                    <tr>
+                        <td>Physical</td>
+                        <td>Ethernet, 802.11</td>
+                    </tr>
+                    <tr>
+                        <td>Network</td>
+                        <td>IPv4, IPv6, ARP</td>
+                    </tr>
+                    <tr>
+                        <td>Transport</td>
+                        <td>TCP, UDP, QUIC</td>
+                    </tr>
+                    <tr>
+                        <td>Application</td>
+                        <td>HTTP, DNS, TLS, DHCP</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="note">
+                <p><strong>New:</strong> Experimental support for QUIC and HTTP/3 protocol analysis</p>
+            </div>
+        </section>
+
+        <section id="reporting">
+            <h2><i class="fas fa-file-export"></i> Reporting Features</h2>
+            <p>Customizable reporting system with multiple export formats.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-file-alt"></i> Report Types</h4>
+                <ul>
+                    <li>Executive summary reports</li>
+                    <li>Technical deep-dive analysis</li>
+                    <li>Security audit reports</li>
+                    <li>Custom template support</li>
+                </ul>
+            </div>
+
+            <h3>Export Options</h3>
+            <pre><code># Generate PDF report
+packet-analyzer generate-report --format pdf --output report.pdf</code></pre>
+
+            <div class="tip">
+                <p>Use Markdown formatting in custom reports for automatic style conversion</p>
+            </div>
+        </section>
+
+        <section id="admin">
+            <h2><i class="fas fa-user-cog"></i> Admin Panel</h2>
+            <p>Centralized management interface for system configuration.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-tasks"></i> Admin Features</h4>
+                <ul>
+                    <li>User access management</li>
+                    <li>System health monitoring</li>
+                    <li>Audit log review</li>
+                    <li>Database maintenance</li>
+                </ul>
+            </div>
+
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/800x450?text=Admin+Dashboard" alt="Admin Interface">
+                <figcaption>Figure 5: Administrator Control Panel</figcaption>
+            </div>
+        </section>
+
+        <section id="settings">
+            <h2><i class="fas fa-cog"></i> Application Settings</h2>
+            <p>Customize the analyzer's behavior and appearance.</p>
+            
+            <div class="feature-box">
+                <h4><i class="fas fa-sliders-h"></i> Configuration Options</h4>
+                <ul>
+                    <li>Capture buffer settings</li>
+                    <li>Colorization rules</li>
+                    <li>Keyboard shortcuts</li>
+                    <li>Automatic updates</li>
+                </ul>
+            </div>
+
+            <h3>Configuration File</h3>
+            <pre><code># Example settings.json
+{
+  "capture": {
+    "default_interface": "eth0",
+    "buffer_size": "64MB"
+  },
+  "ui": {
+    "theme": "dark",
+    "font_size": 12
+  }
+}</code></pre>
         
         <section id="troubleshooting">
             <h2><i class="fas fa-tools"></i> Troubleshooting</h2>
