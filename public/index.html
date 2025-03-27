@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packet Analyzer - User Manual</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Packet Analyzer Tool - Complete User Manual</h1>
+            <img src="https://yourwebsite.com/public/images/analyzer.png" alt="Packet Analyzer Screenshot">
+        </header>
+
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#authentication">Authentication System</a></li>
+                <li><a href="#capture">Packet Capture</a></li>
+                <li><a href="#analysis">Packet Analysis</a></li>
+                <li><a href="#statistics">Network Statistics</a></li>
+                <li><a href="#reporting">Reporting Features</a></li>
+                <li><a href="#admin">Admin Panel</a></li>
+                <li><a href="#settings">Application Settings</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
+        </nav>
+
+        <section id="overview">
+            <h2>1. Overview</h2>
+            <p>The Packet Analyzer is a comprehensive network analysis tool that provides:</p>
+            <ul>
+                <li>Real-time packet capture and analysis</li>
+                <li>Detailed protocol decoding (Ethernet, IP, TCP, UDP, ICMP)</li>
+                <li>User authentication and admin management</li>
+                <li>Network statistics and reporting</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>2. Installation</h2>
+            <h3>Windows</h3>
+            <ol>
+                <li>Download the installer package</li>
+                <li>Run the installer executable</li>
+                <li>Follow the on-screen instructions</li>
+            </ol>
+            
+            <h3>Linux/macOS</h3>
+            <pre><code>pip install -r requirements.txt
+python main.py</code></pre>
+        </section>
+
+        <section id="authentication">
+            <h2>3. Authentication System</h2>
+            <p>The tool features a secure login system with:</p>
+            <ul>
+                <li><strong>User Registration:</strong> Create new accounts with username, password, and security questions</li>
+                <li><strong>Login:</strong> Secure authentication with password hashing</li>
+                <li><strong>Password Recovery:</strong> Reset passwords via security questions</li>
+                <li><strong>Admin Access:</strong> Special privileges for administrative tasks</li>
+            </ul>
+        </section>
+
+        <section id="capture">
+            <h2>4. Packet Capture</h2>
+            <p>To capture network traffic:</p>
+            <ol>
+                <li>Select a network interface from the dropdown</li>
+                <li>Optionally apply a BPF filter (e.g., "tcp port 80")</li>
+                <li>Click "Start Capture"</li>
+                <li>View packets in real-time in the capture pane</li>
+                <li>Click "Stop Capture" when finished</li>
+            </ol>
+            
+            <h3>Supported Protocols</h3>
+            <ul>
+                <li>Ethernet</li>
+                <li>IPv4/IPv6</li>
+                <li>TCP/UDP</li>
+                <li>ICMP</li>
+                <li>HTTP/HTTPS</li>
+                <li>DNS</li>
+                <li>And many more...</li>
+            </ul>
+        </section>
+
+        <section id="analysis">
+            <h2>5. Packet Analysis</h2>
+            <p>The analysis pane provides:</p>
+            <ul>
+                <li><strong>Detailed Protocol Breakdown:</strong> View headers for each protocol layer</li>
+                <li><strong>Hex View:</strong> Examine raw packet data in hexadecimal</li>
+                <li><strong>Smart Decoding:</strong> Automatic interpretation of common protocols</li>
+            </ul>
+            
+            <h3>Using the Analysis Features</h3>
+            <ol>
+                <li>Capture packets or load from a PCAP file</li>
+                <li>Click on any packet in the capture pane</li>
+                <li>View detailed analysis in three sections:
+                    <ul>
+                        <li>Packet summary</li>
+                        <li>Raw hex data</li>
+                        <li>Protocol decodes</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="statistics">
+            <h2>6. Network Statistics</h2>
+            <p>The statistics pane shows real-time metrics:</p>
+            <ul>
+                <li>Packet counts by protocol</li>
+                <li>Bandwidth usage</li>
+                <li>Top talkers (IP addresses)</li>
+                <li>Protocol distribution</li>
+            </ul>
+        </section>
+
+        <section id="reporting">
+            <h2>7. Reporting Features</h2>
+            <p>Generate reports and exports:</p>
+            <ul>
+                <li><strong>Save Captures:</strong> Export to PCAP format</li>
+                <li><strong>Generate Reports:</strong> Create PDF summaries of analysis</li>
+                <li><strong>Bug Reporting:</strong> Submit issues directly from the application</li>
+            </ul>
+        </section>
+
+        <section id="admin">
+            <h2>8. Admin Panel</h2>
+            <p>Administrators can:</p>
+            <ul>
+                <li>Manage user accounts</li>
+                <li>View activity logs</li>
+                <li>Monitor security notifications</li>
+                <li>Respond to user bug reports</li>
+            </ul>
+        </section>
+
+        <section id="settings">
+            <h2>9. Application Settings</h2>
+            <p>Customize your experience:</p>
+            <ul>
+                <li><strong>Themes:</strong> Change application colors</li>
+                <li><strong>Fonts:</strong> Adjust text size and style</li>
+                <li><strong>Capture Options:</strong> Set default filters and interfaces</li>
+                <li><strong>Auto-Save:</strong> Configure automatic capture saving</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>10. Troubleshooting</h2>
+            <h3>Common Issues</h3>
+            <p><strong>No packets captured:</strong></p>
+            <ul>
+                <li>Ensure you have proper permissions</li>
+                <li>Try a different network interface</li>
+                <li>Check your firewall settings</li>
+            </ul>
+            
+            <p><strong>Application crashes:</strong></p>
+            <ul>
+                <li>Update to the latest version</li>
+                <li>Check system requirements</li>
+                <li>Submit a bug report</li>
+            </ul>
+            
+            <h3>Getting Help</h3>
+            <p>For additional support, contact: support@packet-analyzer.example.com</p>
+        </section>
+    </div>
+</body>
+</html>
